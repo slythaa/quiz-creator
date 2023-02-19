@@ -6,6 +6,8 @@ import json
 
 global quizName
 
+score = 0 # is being used later down the line
+
 def mainHub():
     print("Hello, what do you want to do today?\n"
           "(1) Create a quiz \n"
@@ -74,6 +76,8 @@ def createQuiz():
 
 def openPlay():
 
+    global score
+
     print("\n")
 
     openQuiz = input("Enter quiz name: ")
@@ -92,18 +96,27 @@ def openPlay():
 
     print("\n")
 
-    def checkAnswer():  # checks if answer is in the dictionary
-
-        if answer in quizQuestions.values():
-            print("You got it right! ")
-
+    def checkAnswer(question, answer):
+        global score
+        if quizQuestions[question] == answer:
+            print("\n")
+            print("You got it right!")
+            score += 1
         else:
+            print("\n")
             print("You got it wrong...")
 
-    for n in quizQuestions:
-        print(f"Question: {n}")
+    for question in quizQuestions:
+        print("\n")
+        print(f"Question: {question}")
         answer = input("Enter answer here: ")
-        checkAnswer()
+        checkAnswer(question, answer)
+
+    print("\n")
+
+    print(f"Your score is {score} out of {number}")
+
+    score = 0
 
     #print(stuff["quizName"])
 
