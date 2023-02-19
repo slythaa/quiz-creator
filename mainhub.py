@@ -96,21 +96,21 @@ def openPlay():
 
     print("\n")
 
-    def checkAnswer(question, answer):
+    def checkAnswer(n, answer):
         global score
-        if quizQuestions[question] == answer:
+        if quizQuestions[n] == answer:
             print("\n")
             print("You got it right!")
             score += 1
         else:
             print("\n")
-            print(f"You got it wrong. The answer was {quizQuestions[question]}")
+            print(f"You got it wrong. The answer was {quizQuestions[n]}")
 
-    for question in quizQuestions:
+    for n in quizQuestions:
         print("\n")
-        print(f"Question: {question}")
+        print(f"Question: {n}")
         answer = input("Enter answer here: ")
-        checkAnswer(question, answer)
+        checkAnswer(n, answer)
 
     print("\n")
 
@@ -122,8 +122,13 @@ def openPlay():
     elif score > number:
         print("Good job!")
 
+    elif score == 0:
+        print("That's rough.")
+
     elif score < number:
         print("Better luck next time!")
+
+
 
     score = 0
 
