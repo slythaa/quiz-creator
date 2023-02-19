@@ -1,2 +1,1 @@
-# quiz-creator
-basically just kahoot but way worse. great way of learning how to use dictionaries though
+2 python files here, the quizcreator one is the old one that i made on a whim, the mainhub is the project ive been working on. Mainhub basically creates JSON files to save created quizzes. Add python script to a folder to make sure the JSON files are created in that folder aswell. I know my code is bad but I am new at this and holy shit it was so fun making this. Sure i had to google aLOT about json files and json file handling, but it was pretty worth it. 
