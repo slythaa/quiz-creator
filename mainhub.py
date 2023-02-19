@@ -104,7 +104,7 @@ def openPlay():
             score += 1
         else:
             print("\n")
-            print("You got it wrong...")
+            print(f"You got it wrong. The answer was {quizQuestions[question]}")
 
     for question in quizQuestions:
         print("\n")
@@ -115,6 +115,15 @@ def openPlay():
     print("\n")
 
     print(f"Your score is {score} out of {number}")
+
+    if score == number:
+        print(f"Perfect score! Wow! You must know alot about {quizDetails}!")
+
+    elif score > number:
+        print("Good job!")
+
+    elif score < number:
+        print("Better luck next time!")
 
     score = 0
 
